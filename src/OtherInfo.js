@@ -2,7 +2,6 @@ import React from 'react';
 import social from './social_distancing.svg';
 import wash from './wash_hands.svg';
 import rules from './empty_street.svg';
-import RetroHitCounter from 'react-retro-hit-counter';
 
 export function OtherInfo(){
     return (
@@ -69,22 +68,4 @@ export function OtherInfo(){
     </div>);
 }
 
- 
-export const YourComponent = () => (
-  <RetroHitCounter
-    hits={0}
-    withBorder={false}
-    withGlow={false}
-    minLength={4}
-    size={20}
-    padding={4}
-    digitSpacing={3}
-    segmentThickness={2}
-    segmentSpacing={0.5}
-    segmentActiveColor="#FFFFFF"
-    segmentInactiveColor="#f64C72"
-    backgroundColor="#f64C72"
-    borderThickness={7}
-    glowStrength={0.5}
-  />
-);
+
