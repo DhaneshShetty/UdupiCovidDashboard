@@ -8,7 +8,7 @@ export function OtherInfo(){
     <div>
         <h3 style={{color:'#f64C72',margin:'20px'}}>Other Links And Resources</h3>
         <div className="row">
-            <a className="col-sm-4 boxes" href="https://app.cowin.gov.in/login">
+            <a className="col-sm-4 boxes" href="https://selfregistration.cowin.gov.in/">
             <div>
                 Book Vaccine Slot
             </div>
@@ -41,7 +41,7 @@ export function OtherInfo(){
             <div className="col-sm-6 boxes">
                 <h5>Helplines</h5>
                 <p>Helpline No: Department of Health, Udupi – 9663957222, 9663950222<br/>
-                Dr. Sudhir Chandra Suda	District Health Officer	2536650/2525566	9449843066<br/>
+                Dr. Sudhir Chandra Sooda	District Health Officer	2536650/2525566	9449843066<br/>
                 Dr. Madhusudhar Naik	District surgeon	2530333/252055	9449843181<br/>
                 Dr. Nagaratna	District Surveillance Officers	2525561	8277506004/9482847966<br/>
                 Dr. Tejaswini	Epidemiologist	–	8951540905<br/>
