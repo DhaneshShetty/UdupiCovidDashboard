@@ -25,10 +25,17 @@ export function Vaccine(){
         <div>
             <h3 style={{color:'#f64C72',margin:'20px'}}>Vaccination Numbers</h3>
             <div className="row">
-                <div className="col-sm-3 boxes"><h5>Total Doses</h5><h6>{totalVaccines.total}</h6>+{totalVaccines.today}</div>
-                <div className="col-sm-3 boxes"><h5>Dose 1</h5><h6>{doseOneVaccines.total}</h6>+{doseOneVaccines.today}</div>
-                <div className="col-sm-3 boxes"><h5>Dose 2</h5><h6>{doseTwoVaccines.total}</h6>+{doseTwoVaccines.today}</div>
-                <div className="col-sm-3 boxes"><h5>Percentage of population Fully Vaccinated Approx.</h5><h6>~{((doseTwoVaccines.total/1266957)*100).toFixed(2)}%</h6></div>
+                <div className="col-sm-4 boxes"><h5>Total Doses</h5><h6>{totalVaccines.total}</h6>+{totalVaccines.today}</div>
+                <div className="col-sm-4 boxes"><h5>Dose 1</h5><h6>{doseOneVaccines.total}</h6>+{doseOneVaccines.today}</div>
+                <div className="col-sm-4 boxes"><h5>Dose 2</h5><h6>{doseTwoVaccines.total}</h6>+{doseTwoVaccines.today}</div>
+            </div>
+            <span style={{height:"100%",color:"#f64C72",margin:"20px"}}>Fully Vaccinated</span><br/>
+            <div class="progress" style={{backgroundColor:"#242582",margin:"20px",height:"50px",textAlign:"center"}} >
+                <div class="progress-bar progress-bar-striped active" role="progressbar" style={{backgroundColor:"#f64C72",color:"#FFFFFF",width:((doseTwoVaccines.total/1266957)*100).toFixed(2)+"%"}} aria-valuenow={((doseTwoVaccines.total/1266957)*100).toFixed(2)}>{((doseTwoVaccines.total/1266957)*100).toFixed(2)}%</div>
+            </div>
+            <span style={{height:"100%",color:"#f64C72",margin:"20px"}}>Partially Vaccinated</span><br/>
+            <div class="progress" style={{backgroundColor:"#242582",margin:"20px",height:"50px"}}>
+                <div class="progress-bar progress-bar-striped active" role="progressbar" style={{color:"#FFFFFF",width:((doseOneVaccines.total/1266957)*100).toFixed(2)+"%"}} aria-valuenow={((doseOneVaccines.total/1266957)*100).toFixed(2)} aria-valuemin="0" aria-valuemax="100">{((doseOneVaccines.total/1266957)*100).toFixed(2)}%</div>
             </div>
       </div>
     );

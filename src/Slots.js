@@ -80,13 +80,15 @@ export function Slots(){
     <div>
         <h3 style={{color:'#f64C72',margin:'20px'}}>Vaccine Slots Availablility</h3>
         <input type="date" onChange={handleChange} style={{margin:"20px",color:"#f64C72",backgroundColor:"#242582"}} value={date.getFullYear()+"-"+String(date.getMonth() + 1).padStart(2, '0')+"-"+String(date.getDate()).padStart(2, '0')}/>
-        <span style={{backgroundColor:"#242582",color:"#FFFFFF",borderRadius:"5px",width:"50px",margin:"8px",padding:"8px"}} onClick={filter18}>18+</span>
-        <span style={{backgroundColor:"#242582",color:"#FFFFFF",borderRadius:"5px",width:"50px",margin:"8px",padding:"8px"}} onClick={filterFree}>Free</span>
-        <span style={{backgroundColor:"#242582",color:"#FFFFFF",borderRadius:"5px",width:"50px",margin:"8px",padding:"8px"}} onClick={filterPaid}>Paid</span><wbr/>
-        <span style={{backgroundColor:"#242582",color:"#FFFFFF",borderRadius:"5px",width:"50px",margin:"8px",padding:"8px"}} onClick={filterCovaxin}>Covaxin</span>
-        <span style={{backgroundColor:"#242582",color:"#FFFFFF",borderRadius:"5px",width:"50px",margin:"8px",padding:"8px"}} onClick={filterCovisheild}>Covishield</span><wbr/>
-        <span style={{backgroundColor:"#242582",color:"#FFFFFF",borderRadius:"5px",width:"50px",margin:"8px",padding:"8px"}} onClick={filterDose1}>Dose 1</span>
-        <span style={{backgroundColor:"#242582",color:"#FFFFFF",borderRadius:"5px",width:"50px",margin:"8px",padding:"8px"}} onClick={filterDose2}>Dose 2</span><br/>
+        <div className="d-flex flex-wrap justify-content-start">
+            <div style={{backgroundColor:"#242582",color:"#FFFFFF",borderRadius:"5px",margin:"8px",padding:"6px"}} onClick={filter18}>18+</div>
+            <div style={{backgroundColor:"#242582",color:"#FFFFFF",borderRadius:"5px",margin:"8px",padding:"6px"}} onClick={filterFree}>Free</div>
+            <div style={{backgroundColor:"#242582",color:"#FFFFFF",borderRadius:"5px",margin:"8px",padding:"6px"}} onClick={filterPaid}>Paid</div>
+            <div style={{backgroundColor:"#242582",color:"#FFFFFF",borderRadius:"5px",margin:"8px",padding:"6px"}} onClick={filterCovaxin}>Covaxin</div>
+            <div style={{backgroundColor:"#242582",color:"#FFFFFF",borderRadius:"5px",margin:"8px",padding:"6px"}} onClick={filterCovisheild}>Covishield</div>
+            <div style={{backgroundColor:"#242582",color:"#FFFFFF",borderRadius:"5px",margin:"8px",padding:"6px"}} onClick={filterDose1}>Dose 1</div>
+            <div style={{backgroundColor:"#242582",color:"#FFFFFF",borderRadius:"5px",margin:"8px",padding:"6px"}} onClick={filterDose2}>Dose 2</div><br/>
+        </div>
         <div>
             {slots.length===0 ? <div className="boxes"> No Slots Available for this Date </div>:
             slots.filter(it=>{if(age18)
